@@ -27,10 +27,10 @@
             <a class="nav-link current" href="./index.html">Studio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Portfolio</a>
+            <a class="nav-link" href="#">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Contacts</a>
+            <a class="nav-link" href="#">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -44,18 +44,96 @@
           </li>
         </ul>
       </address>
+
+      <button class="burger-btn" type="button" data-menu-open>
+        <svg class="burger-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-heroicons-burger_menu"></use>
+        </svg>
+      </button>
+
+    </div>
+    <!-- Burger menu -->
+    <div class="mobile-menu" data-menu>
+      <div class="container mobile-menu-container">
+        <button class="btn-close" data-menu-close>
+          <svg class="icon-close mobile" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="burger-nav-list">
+            <li class="burger-nav-item">
+              <a class="burger-nav-link" href="./index.html"><span class="burger-href-fisrt">Studio</span></a>
+            </li>
+            <li class="burger-nav-item">
+              <a class="burger-nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="burger-nav-item">
+              <a class="burger-nav-link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="burger-contacts">
+          <ul class="burger-contacts-list">
+            <li class="burger-contacts-item">
+              <a class="burger-contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="burger-contacts-item">
+              <a class="burger-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address>
+        <div class="footer-link-div">
+          <p class="footer-link-text">Social media</p>
+          <ul class="icon-footer-list">
+            <li class="icon-footer-item">
+              <a href="https://www.instagram.com" target="_blank" class="footer-link team-link" rel="noopenr noreferrer"
+                aria-label="Link to instagram">
+                <svg class="team-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-footer-item">
+              <a href="https://www.twitter.com" target="_blank" class="footer-link team-link" rel="noopenr noreferrer"
+                aria-label="Link to instagram">
+                <svg class="team-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-footer-item">
+              <a href="https://www.facebook.com" target="_blank" class="footer-link team-link" rel="noopenr noreferrer"
+                aria-label="Link to instagram">
+                <svg class="team-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="icon-footer-item">
+              <a href="https://www.linkedin.com" target="_blank" class="footer-link team-link" rel="noopenr noreferrer"
+                aria-label="Link to instagram">
+                <svg class="team-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
+
   <main>
     <!--section hero-->
     <section class="section-hero section">
       <div class="container hero-container">
         <h1 class="hero-tytle">Effective Solutions for Your Business</h1>
-        <button type="button" class="hero-button btn">Order Service</button>
+        <button type="button" class="hero-button btn" data-modal-open>Order Service</button>
       </div>
     </section>
     <!--section advantages-->
-    <section class="section-advantages section">
+    <section class="section-advantages section hidden">
       <div class="container advantages-container">
         <h2 class="visually-hidden">Advantages</h2>
         <ul class="advantages-list">
@@ -111,7 +189,7 @@
       </div>
     </section>
     <!--section team -->
-    <section class="section-team section">
+    <section class="section-team section hidden">
       <div class="container">
         <h2 class="team-title">Our Team</h2>
         <ul class="team-list">
@@ -287,7 +365,7 @@
       </div>
     </section>
     <!--section portfolio-->
-    <section class="portfolio section">
+    <section class="portfolio section hidden">
       <div class="container">
         <h2 class="portfolio-title">Our Portfolio</h2>
         <ul class="portfolio-list">
@@ -373,7 +451,7 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer hidden">
     <div class="container footer">
       <div class="footer-logo-container">
         <a href="./index.html" class="logo footer-logo">Web<span class="logo-part">Studio</span></a>
@@ -434,10 +512,10 @@
     </div>
   </footer>
   <!-- Modal window -->
-  <div class="backdrop">
+  <div class="backdrop" data-modal>
     <div class="modal">
-      <button class="modal-btn-close" type="button">
-        <svg class="modal-icon-close" width="8" height="8">
+      <button class="btn-close" type="button" data-modal-close>
+        <svg class="icon-close" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
@@ -497,6 +575,9 @@
       </form>
     </div>
   </div>
+  <!-- Js -->
+  <script src="./js/modal.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>
