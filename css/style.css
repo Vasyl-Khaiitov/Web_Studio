@@ -352,6 +352,16 @@ button {
   background-size: cover;
 }
 
+@media (min-resolution: 192dpi) {
+  .section-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/people-office_des@2x.jpg);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .section-hero {
     padding-top: 112px;
